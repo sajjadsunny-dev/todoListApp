@@ -1,10 +1,12 @@
 let todoApp = document.querySelector('#todoApp');
 let todoInput = todoApp.querySelector('.todoInput');
+let todoDetails = todoApp.querySelector('.todoDetails');
 let todoBtn = todoApp.querySelector('.todoBtn');
 let ul = todoApp.querySelector('ul');
 
 function inputField() {
   let inputValue = todoInput.value;
+  let detailsValue = todoDetails.value;
   let ul = todoApp.querySelector('ul');
 
   if (inputValue - 50 || inputValue == "") {
@@ -27,6 +29,19 @@ function inputField() {
   taskInputEl.setAttribute('readonly', 'readonly');
 
   taskContents.appendChild(taskInputEl);
+
+  const taskDetailsEl = document.createElement("input");
+  taskDetailsEl.classList.add("task-details");
+  taskDetailsEl.type = 'text';
+  taskDetailsEl.value = detailsValue;
+  taskDetailsEl.setAttribute('readonly', 'readonly');
+
+  taskContents.appendChild(taskDetailsEl);
+
+  // const taskDetailsP = document.createElement("p");
+  // taskDetailsP.classList.add("task-details-p");
+  // taskDetailsP.innerText = detailsValue;
+  // taskContents.appendChild(taskDetailsP);
 
   const taskBtnEL = document.createElement('div');
   taskBtnEL.classList.add('task-btns');
@@ -55,11 +70,13 @@ function inputField() {
       taskIconEl.classList.remove("fa-pen-to-square");
       taskIconEl.classList.add("fa-floppy-disk");
       taskInputEl.removeAttribute("readonly");
-      taskInputEl.focus();
+      taskDetailsEl.removeAttribute("readonly");
+      taskDetailsEl.focus();
     } else {
       taskIconEl.classList.remove("fa-floppy-disk");
       taskIconEl.classList.add("fa-pen-to-square");
       taskInputEl.setAttribute("readonly", "readonly");
+      taskDetailsEl.setAttribute("readonly", "readonly");
     }
   });
 
@@ -67,5 +84,6 @@ function inputField() {
     ul.removeChild(taskLiEl);
   })
   todoInput.value = '';
+  todoDetails.value = '';
 
 }

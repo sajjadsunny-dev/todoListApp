@@ -26,7 +26,7 @@ h1 {
 }
 
 .header-form {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@ h1 {
 }
 
 .header-form input::placeholder {
-  color: #444;
+  color: #222222;
 }
 
 input:focus {
@@ -65,7 +65,7 @@ h3 {
   width: 95%;
   margin: 0 auto;
   display: flex;
-  background: royalblue;
+  background: #fff;
   padding: 8px 10px;
   border-radius: 5px;
   margin-top: 12px;
@@ -76,14 +76,13 @@ h3 {
 }
 
 .task-contents input {
-  width: 100%;
+  width: 97%;
   border: 0;
   background: transparent;
-  font-size: 18px;
-  color: #fff;
-  padding-left: 5px;
+  font-size: 19px;
+  color: #000000;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .task-contents .task-details {
@@ -98,10 +97,18 @@ h3 {
 }
 
 .task-btns button {
-  font-size: 15px;
-  padding: 3px 5px;
+  font-size: 20px;
+  border: 0;
+  width: 40px;
+  height: 40px;
   color: green;
   font-weight: 700;
+  transition: all .3s linear;
+}
+
+.task-btns button:hover {
+  color: rgb(255, 255, 255);
+  background: green;
 }
 
 .task-btns .delete {
@@ -109,8 +116,13 @@ h3 {
   color: red;
 }
 
+.task-btns .delete:hover {
+  color: white;
+  background: red;
+}
+
 ul {
-  height: 415px;
+  height: 59vh;
   overflow-y: auto;
   scrollbar-width: none;
   /* Firefox */
@@ -120,6 +132,14 @@ ul::-webkit-scrollbar {
   display: none;
 }
 
-.task-input:not(:read-only) {
+.task-input:not(:read-only),
+.task-details:not(:read-only) {
   color: black;
+}
+
+.task-details-p {
+  font-size: 13px;
+  color: #fff;
+  width: 98%;
+  text-transform: capitalize;
 }
