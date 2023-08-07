@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/all.min.css">
+  <script>
+    window.FontAwesomeConfig = { autoReplaceSvg: false };
+  </script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -21,14 +24,19 @@
         <h1>ToDo List App</h1>
         <form class="header-form">
           <input class="todoInput" type="text" placeholder="Type your Task">
-          <input class="todoBtn" type="button" value="Submit" onclick="inputField()">
+          <input class="todoDetails" type="text" placeholder="Type your Task Details">
+          <button class="todoBtn" type="button" onclick="inputField()">Submit</button>
         </form>
       </header>
       <div class="">
         <h3>Tasks</h3>
         <ul>
           <!-- <li class="task-container">
-            <input class="task-input" type="text" value="my task" readonly>
+            <div class="task-contents">
+              <input class="task-input" type="text" value="my task" readonly>
+              <input class="task-details" type="text"
+                value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, ipsa. Placeat, quia?">
+            </div>
             <div class="task-btns">
               <button class="edit" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
               <button class="delete" type="button"><i class="fa-solid fa-trash"></i></button>
