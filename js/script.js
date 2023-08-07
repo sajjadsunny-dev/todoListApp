@@ -71,7 +71,7 @@ function inputField() {
       taskIconEl.classList.add("fa-floppy-disk");
       taskInputEl.removeAttribute("readonly");
       taskDetailsEl.removeAttribute("readonly");
-      taskDetailsEl.focus();
+      taskInputEl.focus();
     } else {
       taskIconEl.classList.remove("fa-floppy-disk");
       taskIconEl.classList.add("fa-pen-to-square");
