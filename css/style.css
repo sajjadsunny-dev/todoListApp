@@ -69,6 +69,10 @@ h3 {
   font-weight: 600;
 }
 
+.hello {
+  height: 68%;
+}
+
 .task-container {
   width: 95%;
   margin: 0 auto;
@@ -139,10 +143,9 @@ textarea {
 }
 
 ul {
-  height: 59vh;
+  height: 92%;
   overflow-y: auto;
-  scrollbar-width: none;
-  /* Firefox */
+  scrollbar-width: n
 }
 
 ul::-webkit-scrollbar {
@@ -168,6 +171,7 @@ textarea:focus-visible {
 
 @media (min-width: 200px) and (max-width: 600px) {
   .todoMain {
-    width: 600vw;
+    width: 100vw;
+    border-radius: 0;
   }
 }
