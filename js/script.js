@@ -30,18 +30,14 @@ function inputField() {
 
   taskContents.appendChild(taskInputEl);
 
-  const taskDetailsEl = document.createElement("input");
+  const taskDetailsEl = document.createElement("textarea");
   taskDetailsEl.classList.add("task-details");
-  taskDetailsEl.type = 'text';
-  taskDetailsEl.value = detailsValue;
+  taskDetailsEl.innerText = detailsValue;
   taskDetailsEl.setAttribute('readonly', 'readonly');
+  taskDetailsEl.setAttribute('oninput', 'this.style.height = "";this.style.height = this.scrollHeight + "px"');
 
   taskContents.appendChild(taskDetailsEl);
 
-  // const taskDetailsP = document.createElement("p");
-  // taskDetailsP.classList.add("task-details-p");
-  // taskDetailsP.innerText = detailsValue;
-  // taskContents.appendChild(taskDetailsP);
 
   const taskBtnEL = document.createElement('div');
   taskBtnEL.classList.add('task-btns');

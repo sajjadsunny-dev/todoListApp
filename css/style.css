@@ -12,7 +12,8 @@ body {
   width: 380px;
   height: 100vh;
   margin: 0 auto;
-  background: lightskyblue;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.96);
   padding: 10px 15px 25px;
   color: #fff;
 }
@@ -26,7 +27,7 @@ h1 {
 }
 
 .header-form {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -38,13 +39,15 @@ h1 {
   padding: 10px 10px;
   width: 100%;
   margin-bottom: 15px;
-  background: transparent;
   border: 0;
-  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, .15) inset;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.40);
+  background: #FFF;
+  box-shadow: 0px 16px 24px 0px rgba(255, 255, 255, 0.14);
 }
 
 .header-form input::placeholder {
-  color: #222222;
+  color: rgba(0, 0, 0, .5);
 }
 
 input:focus {
@@ -55,6 +58,11 @@ input:focus {
   font-size: 18px;
   padding: 5px 15px;
   font-weight: 500;
+  background: #DFBD43;
+  color: #fff;
+  border-radius: 20px;
+  border: 0;
+  box-shadow: 0px 10px 10px 0px rgba(255, 255, 255, 0.2);
 }
 
 h3 {
@@ -65,30 +73,35 @@ h3 {
   width: 95%;
   margin: 0 auto;
   display: flex;
-  background: #fff;
-  padding: 8px 10px;
-  border-radius: 5px;
+  background: transparent;
+  padding: 10px 13px;
   margin-top: 12px;
+  border-radius: 20px;
+  border: 2px solid #D6D6D6;
 }
 
 .task-contents {
   width: 100%;
 }
 
-.task-contents input {
+.task-contents input,
+textarea {
   width: 97%;
   border: 0;
   background: transparent;
   font-size: 19px;
-  color: #000000;
+  color: #ffffff;
   text-transform: uppercase;
   font-weight: 600;
 }
 
 .task-contents .task-details {
-  font-size: 14px;
+  font-size: 17px;
   text-transform: capitalize;
-  font-weight: 400;
+  font-weight: 500;
+  resize: none;
+  color: #ffffff;
+  margin-top: 8px;
 }
 
 .task-btns {
@@ -99,8 +112,8 @@ h3 {
 .task-btns button {
   font-size: 20px;
   border: 0;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   color: rgb(255, 255, 255);
   background: green;
   font-weight: 700;
@@ -138,7 +151,7 @@ ul::-webkit-scrollbar {
 
 .task-input:not(:read-only),
 .task-details:not(:read-only) {
-  color: black;
+  color: #DFBD43;
 }
 
 .task-details-p {
@@ -146,4 +159,15 @@ ul::-webkit-scrollbar {
   color: #fff;
   width: 98%;
   text-transform: capitalize;
+}
+
+textarea:focus-visible {
+  outline: 0;
+}
+
+
+@media (min-width: 200px) and (max-width: 600px) {
+  .todoMain {
+    width: 600vw;
+  }
 }
